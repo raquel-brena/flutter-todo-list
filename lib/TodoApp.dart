@@ -53,9 +53,16 @@ class _TodoAppState extends State<TodoApp> {
   }
 
   void filtrarTarefas() {
+    final prioridadeMap = {
+      "Baixa": 1,
+      "Média": 2,
+      "Alta": 3,
+    };
+
     setState(() {
       if (_filter.text == "Prioridade") {
-        _listaTarefas.sort((a, b) => a.prioridade.compareTo(b.prioridade));
+        _listaTarefas.sort((a, b) => prioridadeMap[a.prioridade]!
+            .compareTo(prioridadeMap[b.prioridade]!));
       } else if (_filter.text == "Data de execução") {
         _listaTarefas.sort((a, b) => a.dataTarefa.compareTo(b.dataTarefa));
       } else if (_filter.text == "Data de criação") {

@@ -52,14 +52,22 @@ class _TaskCardState extends State<TaskCard> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Text(
-                widget.tarefa.descricao,
-                style: TextStyle(color: isToday ? Colors.white : Colors.black),
-                textAlign: TextAlign.center,
-              ),
-              StatusPrioridade(cor: widget._getPrioridadeColor(), tamanho: 16),
-            ]),
+            Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Text(
+                      widget.tarefa.descricao,
+                      style: TextStyle(
+                          color: isToday ? Colors.white : Colors.black),
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                    ),
+                  ),
+                  StatusPrioridade(
+                      cor: widget._getPrioridadeColor(), tamanho: 16),
+                ]),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,

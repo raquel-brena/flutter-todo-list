@@ -149,10 +149,14 @@ class Actions extends StatelessWidget {
             icon: const Icon(
               Icons.restore_from_trash,
               size: 18,
-              color: Colors.black45,
+              color: Colors.white,
             ),
-            label: Text("Excluir tarefa"),
+            label: Text(
+              "Excluir tarefa",
+              style: TextStyle(color: Colors.white),
+            ),
             style: ElevatedButton.styleFrom(
+              backgroundColor: ThemeData().primaryColor.withOpacity(0.8),
               minimumSize: const Size(30, 30),
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             ),
