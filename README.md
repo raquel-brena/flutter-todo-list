@@ -1,6 +1,6 @@
-# mini_projeto_02
+# Flutter Todo List
 
-A new Flutter project.
+![Frame 10](https://github.com/user-attachments/assets/a280d4a2-9c6b-480c-966d-52b8f4f05fd1)
 
 ## Getting Started
 
